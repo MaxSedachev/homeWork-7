@@ -1,5 +1,5 @@
 export function averageFn() {
-  const input = +prompt("Enter a number");
+  const input = prompt("Enter a number");
   let sum = 0;
   let count = 0;
 
