@@ -1,5 +1,4 @@
-export function minPass() {
-  const now = new Date();
+export function minPass(now) {
   const hours = now.getHours();
   const minutes = now.getMinutes();
 
@@ -7,4 +6,3 @@ export function minPass() {
 
   return minutesPass;
 }
-minPass();
