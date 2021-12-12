@@ -11,5 +11,3 @@ export function averageFn() {
   }
   console.log(sum / count);
 }
-
-averageFn();

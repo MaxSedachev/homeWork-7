@@ -7,4 +7,3 @@ export function multiplicationBySeven() {
   }
   return mult;
 }
-multiplicationBySeven();

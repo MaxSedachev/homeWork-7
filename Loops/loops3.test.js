@@ -6,7 +6,7 @@ describe("Arithmetic mean of all odd numbers", () => {
   });
   it("return 2 for 3", () => {
     jest.spyOn(window, "prompt").mockReturnValue("3");
-    console.log = jest.fn();
+    jest.spyOn(console, "log");
     averageFn();
     expect(console.log).toHaveBeenCalledWith(2);
   });

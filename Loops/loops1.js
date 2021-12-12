@@ -7,4 +7,3 @@ export function sumOfNumbers() {
   }
   return sum;
 }
-sumOfNumbers();
