@@ -5,4 +5,3 @@ export function multAndSum(a, b) {
   console.log(sum);
   console.log(mult);
 }
-multAndSum(2, 8);

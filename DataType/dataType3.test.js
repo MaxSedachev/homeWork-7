@@ -6,7 +6,7 @@ describe("the sum of the digits of the entered number", () => {
   });
   it("return 6 for 123", () => {
     jest.spyOn(window, "prompt").mockReturnValue("123");
-    console.log = jest.fn();
+    jest.spyOn(console, "log");
     sumDigit();
     expect(console.log).toHaveBeenCalledWith(6);
   });

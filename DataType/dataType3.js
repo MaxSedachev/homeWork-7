@@ -7,4 +7,3 @@ export function sumDigit() {
 
   console.log(result);
 }
-sumDigit();
