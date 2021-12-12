@@ -41,4 +41,3 @@ export function month() {
       console.log("Err");
   }
 }
-month();

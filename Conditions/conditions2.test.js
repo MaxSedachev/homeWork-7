@@ -6,7 +6,7 @@ describe("Return the name of the month", () => {
   });
   it("return December for 12", () => {
     jest.spyOn(window, "prompt").mockReturnValue("12");
-    console.log = jest.fn();
+    jest.spyOn(console, "log");
     month();
     expect(console.log).toHaveBeenCalledWith("December");
   });
