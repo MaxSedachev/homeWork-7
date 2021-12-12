@@ -7,4 +7,3 @@ export function lengthArea() {
   const s = Math.PI * r ** 2;
   console.log(Math.floor(s));
 }
-lengthArea();

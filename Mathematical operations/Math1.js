@@ -8,5 +8,3 @@ export function pythagoreanTheorem(a, b, c) {
   }
   return false;
 }
-
-pythagoreanTheorem(2, 2, 6);
