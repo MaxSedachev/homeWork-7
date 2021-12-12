@@ -9,4 +9,3 @@ export function addValues() {
 
   return `${name}, ${age}, ${role}`;
 }
-addValues();
