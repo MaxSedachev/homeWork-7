@@ -9,9 +9,6 @@ export function youngUser() {
 
   if (date1 > date2) {
     return user1;
-  } 
-    return user2;
-  
+  }
+  return user2;
 }
-
-youngUser();
