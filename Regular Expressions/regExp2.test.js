@@ -6,7 +6,7 @@ describe("Is email", () => {
   });
   it("return true for test@gmail.com", () => {
     jest.spyOn(window, "prompt").mockReturnValue("test@gmail.com");
-    console.log = jest.fn();
+    jest.spyOn(console, "log");
     email();
     expect(console.log).toHaveBeenCalledWith(true);
   });

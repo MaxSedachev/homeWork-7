@@ -6,7 +6,8 @@ describe("Is date", () => {
   });
   it("return true for 11.11.2011", () => {
     jest.spyOn(window, "prompt").mockReturnValue("11.11.2011");
-    console.log = jest.fn();
+    jest.spyOn(console, "log");
+    // console.log = jest.fn();
     date();
     expect(console.log).toHaveBeenCalledWith(true);
   });

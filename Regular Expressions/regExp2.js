@@ -5,4 +5,3 @@ export function email() {
 
   console.log(regexp2.test(inputEmail));
 }
-email();

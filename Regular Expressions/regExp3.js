@@ -6,4 +6,3 @@ export function phoneNumber() {
 
   console.log(regexp3.test(inputPhoneNum));
 }
-phoneNumber();

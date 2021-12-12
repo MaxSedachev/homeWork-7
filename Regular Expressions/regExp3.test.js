@@ -6,7 +6,7 @@ describe("Is phone number", () => {
   });
   it("return true for 8911-333-22-11", () => {
     jest.spyOn(window, "prompt").mockReturnValue("8911-333-22-11");
-    console.log = jest.fn();
+    jest.spyOn(console, "log");
     phoneNumber();
     expect(console.log).toHaveBeenCalledWith(true);
   });
