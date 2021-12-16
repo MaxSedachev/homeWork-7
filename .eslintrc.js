@@ -13,6 +13,8 @@ module.exports = {
     "import/prefer-default-export": "off",
     "no-console": "off",
     "no-alert": "off",
+    "no-param-reassign": "off",
+    "no-use-before-define": "off",
     "max-len": [
       "error",
       {

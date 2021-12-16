@@ -1,39 +1,49 @@
-export function buttonClick(){
- let text = getInput();
-  addParagraph(text);
-  hideButton();
-  listParagraph();
-};
+export function createDOM(el) {
+  el.innerHTML = `
+      <input class="text-field" type="Enter a text">
 
-export function getInput(){
-  
-  let input = document.querySelector('.text-field');
-  let button = document.querySelector('button');
+      <button hidden>Click me!</button>
 
-  input.addEventListener('input', () => {
+      <div class="list">
+           <p>Text1</p>
+           <p>Text2</p>
+           <p>Text3</p>
+     </div>
+      `;
+  const input = el.querySelector(".text-field");
+  const button = el.querySelector("button");
+
+  input.addEventListener("input", () => {
     button.hidden = !input.value;
   });
-  return input.value
-};
+  button.addEventListener("click", buttonClick);
+}
 
-export function addParagraph(text){
-  let paragraph = document.createElement('p');
-  paragraph.innerText = text;
+function addParagraph() {
+  const input = document.querySelector(".text-field");
+  const div = document.querySelector(".list");
 
-  let list = document.querySelector('.list');
-  list.append(paragraph);
+  const paragraph = document.createElement("p");
+  paragraph.innerHTML = input.value;
 
-};
-export function hideButton() {
-  let input = document.querySelector('.text-field');
-  let button = document.querySelector('button');
-  input.value = '';
+  div.append(paragraph);
+}
+function hideButton() {
+  const input = document.querySelector(".text-field");
+  const button = document.querySelector("button");
+  input.value = "";
   button.hidden = true;
-  };
+}
 
-export function listParagraph() {
-  let limit = document.querySelectorAll('p');
+function listParagraph() {
+  const limit = document.querySelectorAll("p");
   if (limit.length > 5) {
     limit[0].remove();
-  };
-};
+  }
+}
+
+function buttonClick() {
+  addParagraph();
+  hideButton();
+  listParagraph();
+}
